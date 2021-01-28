@@ -8,7 +8,7 @@ const findCourses = (ctx, args) => {
     fetch(`https://www.udemy.com/api-2.0/courses/?search=${query.replace('about=', '')}&language=${language.replace('lang=', '')}&page_size=50&ordering=newest&price=price-free&ratings=3`, {
         headers: {
             "Accept": "application/json, text/plain, */*",
-            "Authorization": `Basic ${process.env.UDEMY_AUTHORIZATION}`,
+            "Authorization": `Basic Sk4yY3g4RUROTjhEMEhqZnA1dllUMXNEU044b1cySWw3dzE5MFNXRDpwZ04zY0liWG0zbUo1VTZEWGpKcFNJeXFEM2JCbGRjTGpVZ2dKU2dtMmZMVFFsMTE2Q2paY2RaMVNHYlBKcTE3Z2ZDY1c5eWpKYzBtVmdNVlNsQjE1WDVRU1d4ZGpCVmdOUUY4NTFFYUxsV2ttb3ZnY2JGZ0pKMFRPRXJ0RzV1eg==`,
             "Content-Type": "application/json;charset=utf-8"
         }
     })
