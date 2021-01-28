@@ -5,7 +5,7 @@ require('dotenv').config();
 const findCourses = (ctx, args) => {
     const query = args.filter(a => a.indexOf('about=') > -1)[0] || '';
     const language = args.filter(a => a.indexOf('lang=') > -1)[0] || '';
-    fetch(`https://www.udemy.com/api-2.0/courses/?search=${query.replace('query=', '')}&language=${language.replace('language=', '')}&page_size=50&ordering=newest&price=price-free&ratings=3`, {
+    fetch(`https://www.udemy.com/api-2.0/courses/?search=${query.replace('about=', '')}&language=${language.replace('lang=', '')}&page_size=50&ordering=newest&price=price-free&ratings=3`, {
         headers: {
             "Accept": "application/json, text/plain, */*",
             "Authorization": `Basic ${process.env.UDEMY_AUTHORIZATION}`,
