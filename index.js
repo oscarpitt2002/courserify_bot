@@ -6,8 +6,8 @@ const bot = new Telegraf(process.env.BOT_TOKEN)
 
 bot.command('start', (ctx) => ctx.reply(`Hey ${ctx.from.first_name} 😍! What do you want to learn today?? 📚
 
-/course query=what_do_you_want language=preferred_language
-Example: /course query=reactjs language=en`)
+/course about=what_do_you_want lang=preferred_language
+Example: /course about=reactjs lang=en`)
 )
 
 bot.command('course', (ctx) => {
